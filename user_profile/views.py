@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from .models import UserProfile
 from django.contrib.auth.decorators import login_required
 from django.core.files.storage import FileSystemStorage
+from django.conf import settings
+import os
 
 
 # Create your views here.
