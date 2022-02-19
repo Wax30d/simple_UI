@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %} Signup {% endblock %}
 
-</body>
-</html>
+{% block body %}
+
+    <h2>signup</h2>
+
+    <form method="post">{% csrf_token %}
+        <div>
+            <label>username</label>
+            <input type="text" name="username">
+
+            <label>email</label>
+            <input type="text" name="email">
+
+            <label>password</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <button type="submit">submit</button>
+        </div>
+    </form>
+
+{% endblock %}
